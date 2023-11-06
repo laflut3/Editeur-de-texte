@@ -18,11 +18,10 @@ public class CommandeRemplacer extends CommandeDocument {
         String chaine;
         try {
             chaine = parameters[3];
-            this.document.remplacer(start, end, chaine);
         }catch (ArrayIndexOutOfBoundsException e){
             chaine = "";
-            this.document.remplacer(start, end, chaine);
         }
+        this.document.remplacer(start, end, chaine);
         super.executer();
     }
 
