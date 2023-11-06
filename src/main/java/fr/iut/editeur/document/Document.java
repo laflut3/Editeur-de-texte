@@ -26,14 +26,8 @@ public class Document {
     }
 
     public void remplacer(int start, int end, String remplacement) {
-        if(!remplacement.isEmpty()) {
-            String leftPart = texte.substring(0, start);
-            String rightPart = texte.substring(end);
-            texte = leftPart + remplacement + rightPart;
-        }else {
-            String leftPart = texte.substring(0, start);
-            String rightPart = texte.substring(end);
-            texte = leftPart + rightPart;
-        }
+        String leftPart = texte.substring(0, start);
+        String rightPart = texte.substring(end);
+        texte = leftPart + remplacement + rightPart;
     }
 }
