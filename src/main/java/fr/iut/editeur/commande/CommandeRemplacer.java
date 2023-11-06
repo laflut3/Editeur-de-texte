@@ -16,12 +16,13 @@ public class CommandeRemplacer extends CommandeDocument {
         int start = Integer.parseInt(parameters[1]);
         int end = Integer.parseInt(parameters[2]);
         String chaine;
-        if (parameters[3].isEmpty()){
-            chaine = "";
-        }else {
+        try {
             chaine = parameters[3];
+            this.document.remplacer(start, end, chaine);
+        }catch (ArrayIndexOutOfBoundsException e){
+            chaine = "";
+            this.document.remplacer(start, end, chaine);
         }
-        this.document.remplacer(start,end,chaine);
         super.executer();
     }
 
