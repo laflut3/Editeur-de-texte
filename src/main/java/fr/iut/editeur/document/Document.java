@@ -36,6 +36,9 @@ public class Document {
     public void majuscules(int start, int end) {
         String remplacer = texte.substring(start,end);
         remplacer(start,end,remplacer.toUpperCase());
+    }
 
+    public void effacer(int start, int end){
+        remplacer(start,end,"");
     }
 }
