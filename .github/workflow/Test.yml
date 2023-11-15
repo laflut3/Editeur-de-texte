@@ -1,0 +1,15 @@
+name: test
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  nom-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compilation du test du document
+        run: javac ../../src/java/fr/iut/editeur/document/DocumentTest.java
+      - name: Test du document
+        run: java -cp ../../src/java/fr/iut/editeur/document DocumentTest
